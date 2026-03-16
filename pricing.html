@@ -100,7 +100,7 @@
               <li>経営アドバイス</li>
               <li>経営相談（60分）</li>
             </ul>
-          <button class="btn btn-outline-dark mt-3" data-bs-toggle="collapse" data-bs-target="#plan2" href="#plan2">
+          <button class="btn btn-outline-dark mt-3" href="#plan2">
           詳細を見る
           </button>
         </div>
@@ -119,7 +119,7 @@
               <li>KPI設計</li>
               <li>経営レポート</li>
             </ul>
-          <button class="btn btn-dark mt-3" data-bs-toggle="collapse" data-bs-target="#plan4" href="#plan4">
+          <button class="btn btn-dark mt-3" href="#plan4">
           詳細を見る
           </button>
           </div>
@@ -138,7 +138,7 @@
               <li>組織改善支援</li>
               <li>KPI運用支援</li>
             </ul>
-          <button class="btn btn-outline-dark mt-3" data-bs-toggle="collapse" data-bs-target="#plan5" href="#plan5">
+          <button class="btn btn-outline-dark mt-3" href="#plan5">
           詳細を見る
           </button>
           </div>
@@ -336,6 +336,17 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        document.querySelectorAll('a[href^="#plan"]').forEach(link => {
+            link.addEventListener("click", function() {
+                const target = document.querySelector(this.getAttribute("href"));
+                const collapse = new bootstrap.Collapse(target, {
+                    toggle:true
+                });
+            });
+        });
+    </script>
+      
     <footer class="bg-light mt-5">
       <div class="container py-4 text-center">
         <a href="index.html" class="btn btn-outline-dark">
