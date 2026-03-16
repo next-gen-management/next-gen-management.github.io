@@ -62,10 +62,6 @@
         font-size:14px;
         color:#777;
       }
-
-      html{
-          scroll-behavior:smooth;
-      }
         
     </style>
   </head>
@@ -340,17 +336,6 @@
       </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        document.querySelectorAll('a[href^="#plan"]').forEach(link => {
-            link.addEventListener("click", function() {
-                const target = document.querySelector(this.getAttribute("href"));
-                const collapse = new bootstrap.Collapse(target, {
-                    toggle:true
-                });
-            });
-        });
-    </script>
       
     <footer class="bg-light mt-5">
       <div class="container py-4 text-center">
